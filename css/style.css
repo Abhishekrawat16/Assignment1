@@ -1,17 +1,6 @@
-.appTitle{
-    color:#218c74;
-    background-color: #33d9b2;
-    margin: 10px;
-    padding: 10px;
-    text-shadow: 2px 1px #f7f1e3;
-}
 
 body{
     background-color: #ecf0f1;
-}
-.container{
-    margin: 10px;
-    position:relative;
 }
 
 .deleteProject{
@@ -28,21 +17,17 @@ li{
     width: 80%
 }
 
-#sideInstruction{
-    position: absolute;
-    top: 0px;
-    right: 5px;
-    width: 40%;
-    background-color: #16a085;
-}
-
-#sideInstruction p{
-    margin:10px;
-    color:#ecf0f1;
-}
-
-
 table{
     width:80%;
     margin: 0 auto;
+}
+
+label{
+    color: red;
+}
+
+p1{
+  color:green;
+  font-style: italic; 
+  font-size: smaller; 
 }

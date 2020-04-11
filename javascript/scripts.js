@@ -83,10 +83,14 @@ var view= {
 
         var output = document.getElementById('ques4op');
         if(pId==""||pName==""||pStatus==""||pDesc==""){
-            output.textContent ="All Above field are required";
+            output.textContent ="No field should remain empty";
         }
         else{
             projectList.addProject(pId,pName,pStatus,pDesc);
+            document.getElementById("pid").value="";
+            document.getElementById("pname").value="";
+            document.getElementById("pstatus").value="inProgress";
+            document.getElementById("pdesc").value="";
         }
         this.displayProjects();
     },
@@ -112,7 +116,6 @@ var view= {
         deleteButton.className = 'deleteProject';
         deleteButton.addEventListener('click',function(event){
             projectList.deleteProject(event.target.parentNode.id);
-            console.log(projectList.projects);
          });
         return deleteButton;
     },
@@ -145,7 +148,7 @@ var view= {
                 output.textContent=checkInput.checkStatus(pIdSol2,pNameSol2);
             }
             else{ 
-                output.textContent="Aleast one input is requred";
+                output.textContent="Aleast one input is requre";
             }
             
         },
@@ -159,12 +162,11 @@ var view= {
                 var projectTextWithCompletion = '';
                 var project=checkInput.showReqProject(pIdSol3);
                 if(project!=null){
-                projectTextWithCompletion = "  Project Name: "+project.pName+" || "+"Project Description: "+project.pDesc;
-                
-            }
-            else{
-                projectTextWithCompletion= "No Project Found";
-            }
+                    projectTextWithCompletion = "  Project Name: "+project.pName+" || "+"Project Description: "+project.pDesc;
+                }
+                else{
+                    projectTextWithCompletion= "No Project Found";
+                }
                 projectLi.textContent = projectTextWithCompletion;
                 projectUl.appendChild(projectLi);
                
