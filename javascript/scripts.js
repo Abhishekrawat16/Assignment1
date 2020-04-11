@@ -10,11 +10,6 @@ var projectList={
         });
         console.log(this.projects);
     },
-
-    changeProjectStatus: function(pStatus){
-        this.projects[position].pStatus=pStatus;
-        this.displayIssues();
-    },
     
     deleteProject: function(position){
         this.projects.splice(position,1);
@@ -44,18 +39,18 @@ var checkInput={
        for(var i=0; i<projects.length;i++){
            if(pid!="" && projects[i].pId==pid){
                if(projects[i].pStatus=="completed"){
-                return "True: Issue Completed";
+                return "True: Project is Completed";
                }
                else{
-                return "False: Issue In Progress";
+                return "False: Project is In Progress";
                }
            }
            else if(pname!="" && projects[i].pName.toLowerCase()==pname.toLowerCase()){
             if(projects[i].pStatus=="completed"){
-                return "True: Issue Completed";
+                return "True: Project is Completed";
                }
                else{
-                return "False: Issue In Progress";
+                return "False: Project is In Progress";
                }
            }        
        }
