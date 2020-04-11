@@ -13,16 +13,49 @@
       <button onclick="checkInput.isPrime()">IsPrime</button></br>
       <label id="output"></label>
   </div>
-    
+  <hr/>
   <div id="ques4">
     </br> Solution 4 </br></br>
-    Project Id <input id="pid" type="number">
-    Project Name<input id="pname" type="text"></br>
-    Project Status<input id="pstatus" type="text">
-    Project Description<input id="pdesc" type="text"></br>
+    Project Id &emsp;&emsp;<input id="pid" type="number">
+    Project Name &emsp;&emsp;&ensp;<input id="pname" type="text"></br></br>
+    Project Status &ensp;<select id="pstatus">
+        <option value="inProgress">In Progress</option>
+        <option value="completed">Completed</option>
+    </select>&emsp;&emsp;&emsp;&emsp;&emsp;
+    Project Description &nbsp;<input id="pdesc" type="text"></br>
     <button onclick="view.addProject()">Add Project</button></br>
     <label id="ques4op"></label>
   </div>
+  <hr/>
+<div id="ques2">
+    </br> Solution 2 </br></br>
+    Project Id &emsp;&emsp;<input id="pidSol2" type="number">
+    Project Name &emsp;&emsp;&ensp;<input id="pnameSol2" type="text"></br>
+    <button onclick="view.checkStatus()">Check Status</button></br>
+    <label id="ques2op"></label>
+</div>
+<hr/>
+<div id="ques3">
+</br> Solution 3 </br></br>
+Project Id &emsp;&emsp;<input id="pidSol3" type="number">
+<button onclick="view.showReqProject()">Search Project</button>
+<button onclick="view.displayProjects()">Reset</button></br>
+
+<label id="ques3op"></label>
+</div>
+
+  <hr/>
+
+  <table border="1">
+    <tr>
+        <td height="40%" valign="top">
+            <ul>Projects will be display here
+                
+            </ul>
+        </td>
+        </tr>
+</table>
+
     <script type="text/javascript" src="javascript/scripts.js"></script>
 </body>
 </html>
